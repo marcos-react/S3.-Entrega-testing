@@ -35,7 +35,12 @@ function orderAlphabetically(array) {
 }
 
 // Exercise 5: Order by year, ascending
-function orderByYear() {
+function orderByYear(array) {
+
+  let newArray = [...array];  // Copy of array for the test
+  let result = newArray.sort((first,second) => first.year == second.year ? first.title.localeCompare(second.title) : first.year - second.year); // order alphabetic for year and if year same then title
+  console.log("EXERCICE 5 ->", result);
+  return result;
 
 }
 
